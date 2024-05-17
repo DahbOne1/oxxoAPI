@@ -1,0 +1,46 @@
+###Recupar todas los oxxos aprovados
+GET http://localhost:1234/oxxos
+
+###Recuperar todos los oxxos de manera general
+GET http://localhost:1234/oxxos/all
+
+###Recuperar todos los oxxos faltantes por aprovar
+GET http://localhost:1234/oxxos/pending
+
+###Recuperar un oxxo por su id
+GET http://localhost:1234/oxxos/293ce3d4-a9da-4766-a6c5-9ce427f79336
+
+###Crear un nuevo oxxo
+POST http://localhost:1234/oxxos
+Content-Type: application/json
+
+{
+    "name": "Oxxo Colonia del valle",
+    "direction": "Colonia del valle, avenida constitución calle 13",
+    "city": "Chilpancingo",
+    "rate": 10,
+    "pendingUpdate": false,
+    "approved": false,
+    "oppened":true
+}
+
+###Actualizar un oxxo
+PUT  http://localhost:1234/oxxos/11
+Content-Type: application/json
+
+{
+    "name": "Oxxo Colonia del valle",
+    "direction": "Colonia del valle, avenida constitución calle 13",
+    "city": "Acapulco",
+    "rate": 0,
+    "pendingUpdate": false,
+    "approved": false,
+    "oppened": false
+}
+
+###Actualizar  parcialmente un oxxo
+PATCH  http://localhost:1234/oxxos/11
+
+###Eliminar un Oxxo
+DELETE  http://localhost:1234/oxxos/11
+
